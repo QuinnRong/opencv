@@ -3,8 +3,8 @@ import numpy as np
 
 data = cv.imread("lena.jpeg")
 
-resized = cv.resize(data, (70, 100), cv.INTER_NEAREST)
+resized = cv.resize(data, (70, 100), 0, 0, cv.INTER_NEAREST)
 np.savetxt("near_py.txt", resized.flatten(), fmt='%d', delimiter='\n')
 
-resized = cv.resize(data, (70, 100), cv.INTER_LINEAR)
+resized = cv.resize(data, (70, 100), 0, 0, cv.INTER_LINEAR)
 np.savetxt("linear_py.txt", resized.flatten(), fmt='%d', delimiter='\n')
